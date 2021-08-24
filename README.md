@@ -50,3 +50,8 @@ Your task is to:
 - Ensure that the `Deployment` is secure with a custom service account with no Kubernetes permissions.
 - Set up a `CronJob` that outputs "Hello World" every thirty minutes.
 - Create a GCS bucket, `peardeck-sre-challenge-<first_initial><last_name>` (either with Terraform or GKE Config Connector.) For example, if your name is John Doe, create a GCS bucket `peardeck-sre-challenge-jdoe`.
+
+Optional tasks:
+
+- Document exactly what else you'd add to best monitor the service. Even though the HTTP server is a toy service, explain what sort of basic things you'd want to monitor as if it was a production service. (No need to implement an actual solution here.)
+- Imagine that the service is stateful: what considerations would you keep in mind while designing out the service? Document what these considerations would be and what informed your decision. (No need to implement an actual solution here.)
