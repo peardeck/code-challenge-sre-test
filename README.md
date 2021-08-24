@@ -43,6 +43,8 @@ We've developed this code challenge to allow you, as a candidate, to showcase th
 
 # The Task
 
+You will be provided with a static Google JSON authentication key for using `gcloud` and Terraform commands. No need for shared Terraform state - please commit your state file alongside your Terraform code if you opt to use Terraform.
+
 Your task is to:
 
 - Serve a basic HTTP response with a load balancer. We use GKE so you can elect to use an ingress controller or a simple HTTP `LoadBalancer` service. Use `strm/helloworld-http` (https://hub.docker.com/r/strm/helloworld-http) as your HTTP server - no need to modify the image or anything.
@@ -55,3 +57,22 @@ Optional tasks:
 
 - Document exactly what else you'd add to best monitor the service. Even though the HTTP server is a toy service, explain what sort of basic things you'd want to monitor as if it was a production service. (No need to implement an actual solution here.)
 - Imagine that the service is stateful: what considerations would you keep in mind while designing out the service? Document what these considerations would be and what informed your decision. (No need to implement an actual solution here.)
+
+## Stack preferences
+
+- Helm 3.x
+- Terraform 1.x
+- Google Kubernetes Engine (assume that GKE Config Connector is enabled)
+
+## Folder structure
+
+- The `helm/` folder contains a skeleton Helm chart.
+- The `terraform/` folder contains a blank Terraform workspace to use.
+
+## Setup
+
+1. Ensure you have `git` installed on your computer
+2. Ensure that you have the Terraform, `kubectl`, `helm`, and `gcloud` CLIs installed.
+3. Follow instructions below to authenticate against the Kubernetes cluster:
+  - Run `gcloud container clusters get-credentials pd-us-sre-code-challenge-cluster --project pd-us-sre-code-challenge-cluster --zone us-central1-f`
+  - Run `kubectl get pods` to verify connectivity 
