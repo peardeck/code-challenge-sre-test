@@ -74,5 +74,7 @@ Optional tasks:
 1. Ensure you have `git` installed on your computer
 2. Ensure that you have the Terraform, `kubectl`, `helm`, and `gcloud` CLIs installed.
 3. Follow instructions below to authenticate against the Kubernetes cluster:
-   - Run `gcloud container clusters get-credentials pd-us-sre-code-challenge-cluster --project pd-us-sre-code-challenge-cluster --zone us-central1-f`
-   - Run `kubectl get pods` to verify connectivity 
+   - Run `gcloud auth activate-service-account --key-file=/path/to/keyfile.json --project=pd-us-app-dev-sre-challenge`
+   - Run `gcloud container clusters get-credentials pd-us-sre-challenge-cluster --project pd-us-sre-challenge-cluster --zone us-central1-f`
+   - Run `kubectl config set-context --current --namespace=candidate-<first_name><last_name>` (`first_name` and `last_name` are both lowercase)
+   - Run `kubectl get pods` to verify connectivity
