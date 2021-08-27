@@ -52,7 +52,8 @@ Your task is to:
     - If you are unable to pinpoint the issue, not a problem - we can chat about how you would go about debugging the issue.
 - Ensure that the `Deployment` is secure with a custom service account with no Kubernetes permissions.
 - Set up a `CronJob` that outputs "Hello World" every thirty minutes.
-- Create a GCS bucket, `peardeck-sre-challenge-<first_initial><last_name>` (either with Terraform or GKE Config Connector.) For example, if your name is John Doe, create a GCS bucket `peardeck-sre-challenge-jdoe`.
+- Create a GCS bucket, `peardeck-sre-challenge-<first_name><last_name>` (either with Terraform or GKE Config Connector.) For example, if your name is John Doe, create a GCS bucket `peardeck-sre-challenge-johndoe`.
+  - You will need to provide an annotation, `cnrm.cloud.google.com/project-id: "pd-us-app-dev-sre-challenge"` if you use config connector.
 
 Optional tasks:
 
