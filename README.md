@@ -47,8 +47,9 @@ You will be provided with a static Google JSON authentication key for using `gcl
 
 Your task is to:
 
-- Serve a basic HTTP response with a load balancer. We use GKE so you can elect to use an ingress controller or a simple HTTP `LoadBalancer` service. Use `strm/helloworld-http` (https://hub.docker.com/r/strm/helloworld-http) as your HTTP server - no need to modify the image or anything.
+- Serve a basic HTTP response with a load balancer. Use a `LoadBalancer` service for this purpose. Use `strm/helloworld-http` (https://hub.docker.com/r/strm/helloworld-http) as your HTTP server - no need to modify the image or anything.
   - You might need to debug any problems that occur while trying to have this serve traffic. Document any fixes required in either a separate text file or alongside your code.
+    - If you are unable to pinpoint the issue, not a problem - we can chat about how you would go about debugging the issue.
 - Ensure that the `Deployment` is secure with a custom service account with no Kubernetes permissions.
 - Set up a `CronJob` that outputs "Hello World" every thirty minutes.
 - Create a GCS bucket, `peardeck-sre-challenge-<first_initial><last_name>` (either with Terraform or GKE Config Connector.) For example, if your name is John Doe, create a GCS bucket `peardeck-sre-challenge-jdoe`.
