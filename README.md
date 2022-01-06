@@ -45,6 +45,8 @@ We've developed this code challenge to allow you, as a candidate, to showcase th
 
 You will be provided with a static Google JSON authentication key for using `gcloud` and Terraform commands. No need for shared Terraform state - please commit your state file alongside your Terraform code if you opt to use Terraform.
 
+Please note that the JSON key is scoped *only to your Kubernetes namespace* - so any cluster-level listing operations will fail.
+
 Your task is to:
 
 - Serve a basic HTTP response with a load balancer. Use a `LoadBalancer` service for this purpose. Use `strm/helloworld-http` (https://hub.docker.com/r/strm/helloworld-http) as your HTTP server - no need to modify the image or anything.
